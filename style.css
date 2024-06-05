@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Lobster', cursive; /* Utilisation de la police Lobster */
+  background: linear-gradient(135deg, #f5f5dc, #d2b48c); /* Dégradé de fond beige */
+  color: black; /* Couleur du texte */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Assurer que le body couvre toute la hauteur de la fenêtre */
+  padding-top: 100px; /* Espace pour le header fixe */
+  padding-bottom: 60px; /* Espace pour le footer fixe */
+}
+
+.site-header {
+  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le header */
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centrer le texte horizontalement */
+  padding: 20px 0; /* Espace intérieur du bandeau */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
+  position: fixed; /* Position fixe pour rester en haut de la page */
+  top: 0; /* Position en haut */
+  left: 0; /* Position à gauche */
+  width: 100%; /* Assurer que le header couvre toute la largeur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Assurer que le header soit au-dessus des autres éléments */
+}
+
+.site-footer {
+  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le footer */
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centrer le texte horizontalement */
+  padding: 10px 0; /* Espace intérieur du bandeau */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
+  position: fixed; /* Position fixe pour rester en bas de la page */
+  bottom: 0; /* Position en bas */
+  left: 0; /* Position à gauche */
+  width: 100%; /* Assurer que le footer couvre toute la largeur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Assurer que le footer soit au-dessus des autres éléments */
+}
+
+.logo-left, .logo-right, .footer-logo-left, .footer-logo-right {
+  font-size: 2em; /* Taille de l'icône */
+  margin: 0 15px; /* Espacement des icônes par rapport au titre */
+  animation: spin 4s linear infinite; /* Animation de rotation */
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.site-title, .footer-text {
+  margin: 0; /* Supprimer les marges par défaut */
+  font-family: 'Lobster', cursive; /* Utilisation de la police Lobster */
+  font-size: 4em; /* Taille de la police */
+  letter-spacing: 2px; /* Espacement des lettres pour un effet stylé */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée pour le texte */
+  position: relative; /* Position relative pour le soulignement */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transition douce pour le survol */
+}
+
+.site-title::after {
+  content: ''; /* Contenu vide pour le pseudo-élément */
+  position: absolute; /* Position absolue pour le soulignement */
+  width: 0; /* Largeur initiale à 0 */
+  height: 3px; /* Hauteur du soulignement */
+  background-color: #FFD700; /* Couleur du soulignement */
+  bottom: -10px; /* Positionnement en dessous du texte */
+  left: 50%; /* Commence au centre */
+  transform: translateX(-50%); /* Centrer horizontalement */
+  transition: width 0.3s ease; /* Transition douce pour le soulignement */
+}
+
+.site-title:hover::after {
+  width: 100%; /* Largeur complète au survol */
+}
+
+.site-title:hover {
+  transform: scale(1.1); /* Agrandir légèrement au survol */
+  color: #FFD700; /* Changer la couleur au survol */
+}
+
+.footer-text {
+  font-size: 1.5em; /* Taille de la police */
+}
+
+.content {
+  text-align: center; /* Centrer le contenu */
+  padding: 20px; /* Espacement intérieur */
+}
+
+.content p {
+  font-size: 2em; /* Taille de la police */
+  font-family: 'Lobster', cursive; /* Utilisation de la police Lobster */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
+}
+
+@media (max-width: 600px) {
+  .site-title {
+      font-size: 2.5em; /* Taille de la police plus petite pour les petits écrans */
+  }
+  .footer-text {
+      font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
+  }
+  .logo-left, .logo-right, .footer-logo-left, .footer-logo-right {
+      font-size: 1.5em; /* Taille de l'icône plus petite pour les petits écrans */
+  }
+  .content p {
+      font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
+  }
+}
+
+section ul {
+  font-size: 2em; /* Ajoutez la taille de police que vous préférez */
+}
+
+h2 {
+  font-size: 3em;
+}
