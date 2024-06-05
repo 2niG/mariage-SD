@@ -1,7 +1,11 @@
 body {
   margin: 0;
-  font-family: 'Lobster', cursive; /* Utilisation de la police Lobster */
-  background: linear-gradient(135deg, #f5f5dc, #d2b48c); /* Dégradé de fond beige */
+  font-family: "Lobster", cursive; /* Utilisation de la police Lobster */
+  background: linear-gradient(
+    135deg,
+    #f5f5dc,
+    #d2b48c
+  ); /* Dégradé de fond beige */
   color: black; /* Couleur du texte */
   display: flex;
   flex-direction: column;
@@ -44,7 +48,10 @@ body {
   z-index: 1000; /* Assurer que le footer soit au-dessus des autres éléments */
 }
 
-.logo-left, .logo-right, .footer-logo-left, .footer-logo-right {
+.logo-left,
+.logo-right,
+.footer-logo-left,
+.footer-logo-right {
   font-size: 2em; /* Taille de l'icône */
   margin: 0 15px; /* Espacement des icônes par rapport au titre */
   animation: spin 4s linear infinite; /* Animation de rotation */
@@ -52,16 +59,17 @@ body {
 
 @keyframes spin {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-.site-title, .footer-text {
+.site-title,
+.footer-text {
   margin: 0; /* Supprimer les marges par défaut */
-  font-family: 'Lobster', cursive; /* Utilisation de la police Lobster */
+  font-family: "Lobster", cursive; /* Utilisation de la police Lobster */
   font-size: 4em; /* Taille de la police */
   letter-spacing: 2px; /* Espacement des lettres pour un effet stylé */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée pour le texte */
@@ -70,11 +78,11 @@ body {
 }
 
 .site-title::after {
-  content: ''; /* Contenu vide pour le pseudo-élément */
+  content: ""; /* Contenu vide pour le pseudo-élément */
   position: absolute; /* Position absolue pour le soulignement */
   width: 0; /* Largeur initiale à 0 */
   height: 3px; /* Hauteur du soulignement */
-  background-color: #FFD700; /* Couleur du soulignement */
+  background-color: #8b4513; /* Couleur du soulignement */
   bottom: -10px; /* Positionnement en dessous du texte */
   left: 50%; /* Commence au centre */
   transform: translateX(-50%); /* Centrer horizontalement */
@@ -87,7 +95,7 @@ body {
 
 .site-title:hover {
   transform: scale(1.1); /* Agrandir légèrement au survol */
-  color: #FFD700; /* Changer la couleur au survol */
+  color: #8b4513; /* Changer la couleur au survol */
 }
 
 .footer-text {
@@ -101,29 +109,97 @@ body {
 
 .content p {
   font-size: 2em; /* Taille de la police */
-  font-family: 'Lobster', cursive; /* Utilisation de la police Lobster */
+  font-family: "Lobster", cursive; /* Utilisation de la police Lobster */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
 }
 
 @media (max-width: 600px) {
   .site-title {
-      font-size: 2.5em; /* Taille de la police plus petite pour les petits écrans */
+    font-size: 2.5em; /* Taille de la police plus petite pour les petits écrans */
   }
   .footer-text {
-      font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
+    font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
   }
-  .logo-left, .logo-right, .footer-logo-left, .footer-logo-right {
-      font-size: 1.5em; /* Taille de l'icône plus petite pour les petits écrans */
+  .logo-left,
+  .logo-right,
+  .footer-logo-left,
+  .footer-logo-right {
+    font-size: 1.5em; /* Taille de l'icône plus petite pour les petits écrans */
   }
   .content p {
-      font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
+    font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
   }
-}
-
-section ul {
-  font-size: 2em; /* Ajoutez la taille de police que vous préférez */
 }
 
 h2 {
   font-size: 3em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  width: 40%; /* Remplacez par la largeur souhaitée */
+  height: 40%; /* Remplacez par la hauteur souhaitée */
+  object-fit: cover; /* Cette règle assure que vos images couvrent toute la zone définie sans se déformer */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.retour-button {
+  background-color: #8b4513; /* Remplacez par la couleur de votre choix */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.retour-button:hover {
+  background-color: #a0522d; /* Remplacez par la couleur de votre choix lorsque la souris survole le bouton */
 }
