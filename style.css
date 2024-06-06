@@ -162,35 +162,6 @@ a {
   object-fit: cover; /* Cette règle assure que vos images couvrent toute la zone définie sans se déformer */
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 .retour-button {
   background-color: #8b4513; /* Remplacez par la couleur de votre choix */
   border: none;
@@ -203,6 +174,7 @@ a {
   margin: 4px 2px;
   cursor: pointer;
   transition-duration: 0.4s;
+  margin-top: 150px;
 }
 
 .retour-button:hover {
@@ -221,4 +193,18 @@ p.maClasse {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.full-page-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    245,
+    245,
+    220,
+    0.7
+  ); /* Vous pouvez changer la couleur de fond */
 }
