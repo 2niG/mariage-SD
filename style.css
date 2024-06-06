@@ -1,12 +1,10 @@
 body {
+  background-image: url("./Fond.jpg");
+  background-size: cover;
   margin: 0;
-  font-family: "Lobster", cursive; /* Utilisation de la police Lobster */
-  background: linear-gradient(
-    135deg,
-    #f5f5dc,
-    #d2b48c
-  ); /* Dégradé de fond beige */
-  color: black; /* Couleur du texte */
+  font-family: "Send Flowers", cursive;
+  /* background: linear-gradient( 135deg,#f5f5dc,#d2b48c); Dégradé de fond beige */
+  color: #800000; /* Couleur du texte */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,7 +67,7 @@ body {
 .site-title,
 .footer-text {
   margin: 0; /* Supprimer les marges par défaut */
-  font-family: "Lobster", cursive; /* Utilisation de la police Lobster */
+  font-family: "Send Flowers", cursive;
   font-size: 4em; /* Taille de la police */
   letter-spacing: 2px; /* Espacement des lettres pour un effet stylé */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée pour le texte */
@@ -105,15 +103,16 @@ body {
 .content {
   text-align: center; /* Centrer le contenu */
   padding: 20px; /* Espacement intérieur */
+  background-color: rgba(245, 245, 220, 0.7); /* beige */
 }
 
 .content p {
   font-size: 2em; /* Taille de la police */
-  font-family: "Lobster", cursive; /* Utilisation de la police Lobster */
+  font-family: "Send Flowers", cursive;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .site-title {
     font-size: 2.5em; /* Taille de la police plus petite pour les petits écrans */
   }
@@ -132,6 +131,9 @@ body {
   .content h2 {
     font-size: 1.5em;
   }
+  .content i {
+    font-size: 2rem;
+  }
 }
 
 h2 {
@@ -139,8 +141,8 @@ h2 {
 }
 
 a {
-  color: black;
   text-decoration: none;
+  color: #800000;
 }
 
 * {
@@ -205,4 +207,18 @@ a {
 
 .retour-button:hover {
   background-color: #a0522d; /* Remplacez par la couleur de votre choix lorsque la souris survole le bouton */
+}
+
+i {
+  font-size: 3rem;
+}
+
+p.maClasse {
+  border-bottom: 2px solid #800000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
