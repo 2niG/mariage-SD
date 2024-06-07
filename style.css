@@ -145,42 +145,6 @@ a {
   color: #800000;
 }
 
-* {
-  box-sizing: border-box;
-}
-.mySlides {
-  display: none;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  width: 40%; /* Remplacez par la largeur souhaitée */
-  height: 40%; /* Remplacez par la hauteur souhaitée */
-  object-fit: cover; /* Cette règle assure que vos images couvrent toute la zone définie sans se déformer */
-}
-
-.retour-button {
-  background-color: #8b4513; /* Remplacez par la couleur de votre choix */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  margin-top: 150px;
-}
-
-.retour-button:hover {
-  background-color: #a0522d; /* Remplacez par la couleur de votre choix lorsque la souris survole le bouton */
-}
-
 i {
   font-size: 3rem;
 }
@@ -193,18 +157,4 @@ p.maClasse {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.full-page-block {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(
-    245,
-    245,
-    220,
-    0.7
-  ); /* Vous pouvez changer la couleur de fond */
 }
