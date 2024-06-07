@@ -56,7 +56,6 @@ body {
   background-color: rgba(245, 245, 220, 0.7); /* beige */
   width: 100%;
   height: 100%;
-
 }
 
 .site-header {
@@ -76,20 +75,20 @@ body {
 }
 
 .site-footer {
-    background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le footer */
-    color: white; /* Couleur du texte */
-    text-align: center; /* Centrer le texte horizontalement */
-    padding: 10px 0; /* Espace intérieur du bandeau */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
-    position: fixed; /* Position fixe pour rester en bas de la page */
-    bottom: 0; /* Position en bas */
-    left: 0; /* Position à gauche */
-    width: 100%; /* Assurer que le footer couvre toute la largeur */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Assurer que le footer soit au-dessus des autres éléments */
-  }
+  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le footer */
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centrer le texte horizontalement */
+  padding: 10px 0; /* Espace intérieur du bandeau */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
+  position: fixed; /* Position fixe pour rester en bas de la page */
+  bottom: 0; /* Position en bas */
+  left: 0; /* Position à gauche */
+  width: 100%; /* Assurer que le footer couvre toute la largeur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Assurer que le footer soit au-dessus des autres éléments */
+}
 
 .logo-left,
 .logo-right,
@@ -146,43 +145,51 @@ body {
 }
 
 .retour-button {
-    background-color: #8b4513; /* Remplacez par la couleur de votre choix */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    margin-top: 150px;
-  }
-  
-  .retour-button:hover {
-    background-color: #a0522d; /* Remplacez par la couleur de votre choix lorsque la souris survole le bouton */
-  }
-
-  h2 {
-    font-size: 2.5em;
-  }
-
-  @media screen and (max-width: 600px) {
-    .site-title {
-      font-size: 2.5em; /* Taille de la police plus petite pour les petits écrans */
-    }
-    .footer-text {
-      font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
-    }
-    .logo-left,
-    .logo-right,
-    .footer-logo-left,
-    .footer-logo-right {
-      font-size: 1.5em; /* Taille de l'icône plus petite pour les petits écrans */
-    }
-    .content h2 {
-        font-size: 1.5em;
-      }
+  background-color: #8b4513; /* Remplacez par la couleur de votre choix */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-top: 150px;
 }
 
+.retour-button:hover {
+  background-color: #a0522d; /* Remplacez par la couleur de votre choix lorsque la souris survole le bouton */
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+@media screen and (max-width: 600px) {
+  .site-title {
+    font-size: 2.5em; /* Taille de la police plus petite pour les petits écrans */
+  }
+  .footer-text {
+    font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
+  }
+  .logo-left,
+  .logo-right,
+  .footer-logo-left,
+  .footer-logo-right {
+    font-size: 1.5em; /* Taille de l'icône plus petite pour les petits écrans */
+  }
+  .content h2 {
+    font-size: 1.5em;
+  }
+  .content p {
+    font-size: 1.2em; /* Taille de la police plus petite pour les petits écrans */
+  }
+}
+
+p {
+  font-size: 2em; /* Taille de la police */
+  font-family: "Send Flowers", cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
+}
