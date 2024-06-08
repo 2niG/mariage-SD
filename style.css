@@ -36,7 +36,12 @@ body {
 }
 
 .site-footer {
-  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le footer */
+    background: rgba(
+    245,
+    245,
+    220,
+    0.3
+  ); /* Fond semi-transparent pour le header */
   color: white; /* Couleur du texte */
   text-align: center; /* Centrer le texte horizontalement */
   padding: 10px 0; /* Espace intérieur du bandeau */
