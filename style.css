@@ -15,8 +15,13 @@ body {
 }
 
 .site-header {
-  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le header */
-  color: white; /* Couleur du texte */
+  background: rgba(
+    245,
+    245,
+    220,
+    0.3
+  ); /* Fond semi-transparent pour le header */
+  color: #800000; /* Couleur du texte */
   text-align: center; /* Centrer le texte horizontalement */
   padding: 20px 0; /* Espace intérieur du bandeau */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
@@ -73,6 +78,7 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée pour le texte */
   position: relative; /* Position relative pour le soulignement */
   transition: transform 0.3s ease, color 0.3s ease; /* Transition douce pour le survol */
+  font-weight: bold;
 }
 
 .site-title::after {
@@ -80,7 +86,7 @@ body {
   position: absolute; /* Position absolue pour le soulignement */
   width: 0; /* Largeur initiale à 0 */
   height: 3px; /* Hauteur du soulignement */
-  background-color: #8b4513; /* Couleur du soulignement */
+  background-color: #fffff0; /* Couleur du soulignement */
   bottom: -10px; /* Positionnement en dessous du texte */
   left: 50%; /* Commence au centre */
   transform: translateX(-50%); /* Centrer horizontalement */
@@ -93,7 +99,7 @@ body {
 
 .site-title:hover {
   transform: scale(1.1); /* Agrandir légèrement au survol */
-  color: #8b4513; /* Changer la couleur au survol */
+  color: #fffff0; /* Changer la couleur au survol */
 }
 
 .footer-text {
@@ -103,13 +109,13 @@ body {
 .content {
   text-align: center; /* Centrer le contenu */
   padding: 20px; /* Espacement intérieur */
-  background-color: rgba(245, 245, 220, 0.7); /* beige */
 }
 
 .content p {
   font-size: 2em; /* Taille de la police */
   font-family: "Send Flowers", cursive;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
+  color: #800000;
 }
 
 @media screen and (max-width: 600px) {
@@ -138,6 +144,8 @@ body {
 
 h2 {
   font-size: 2.5em;
+  font-family: "Send Flowers", cursive;
+  color: #800000;
 }
 
 a {
@@ -157,4 +165,102 @@ p.maClasse {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.retour-button {
+  background-color: #800000; /* Remplacez par la couleur de votre choix */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-top: 150px;
+}
+
+.retour-button:hover {
+  background-color: #a0522d; /* Remplacez par la couleur de votre choix lorsque la souris survole le bouton */
+}
+
+.titrediapo {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+#carouselExampleIndicators {
+  width: 300px; /* Ajustez cette valeur pour changer la largeur du carrousel */
+  height: 200px; /* Ajustez cette valeur pour changer la hauteur du carrousel */
+  margin: 0 auto; /* Centre le carrousel horizontalement */
+}
+
+.carousel-inner {
+  width: 100%;
+  max-height: 100%; /* Changez cette valeur pour ajuster la hauteur du carrousel */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer; /* Change le curseur en une main lorsque vous survolez l'image */
+}
+
+.carousel-indicators li {
+  background-color: #808080; /* Changez cette couleur pour modifier la couleur des indicateurs de diapositives non actives */
+}
+
+.carousel-indicators .active {
+  background-color: #000000; /* Changez cette couleur pour modifier la couleur de l'indicateur de diapositive actif */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Cette couleur est un noir semi-transparent */
+}
+
+/* Styles pour la fenêtre modale */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 120px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(245, 245, 220, 0.7); /* beige */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 60%;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #800000;
+  text-decoration: none;
+  cursor: pointer;
 }
