@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap"
       rel="stylesheet"
@@ -12,6 +12,10 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link rel="icon" type="image/png" href="./marriage.png" />
   </head>
@@ -27,30 +31,113 @@
         <i class="fa-regular fa-star"></i>
       </div>
     </header>
+    <br />
     <main class="content">
-      <h2>Photos Souvenir</h2>
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img src="./M1.jpg" style="width: 100%" />
+      <h2 class="titrediapo">Photos Souvenir</h2>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="./M1.jpg"
+              alt="Première diapositive"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="./M2.jpg"
+              alt="Deuxième diapositive"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="./M3.jpg"
+              alt="Troisième diapositive"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="./M1.jpg"
+              alt="Quatrième diapositive"
+            />
+          </div>
         </div>
-        <div class="mySlides fade">
-          <img src="./M2.jpg" style="width: 100%" />
-        </div>
-        <div class="mySlides fade">
-          <img src="./M3.jpg" style="width: 100%" />
-        </div>
-        <p>
-          Chaque souvenir est une mélodie douce qui danse au rythme de notre
-          cœur, nous rappelant les moments précieux de la vie.
-        </p>
-        <button class="retour-button">Retour à l'accueil</button>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Précédent</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Suivant</span>
+        </a>
       </div>
+      <p>
+        Chaque souvenir est une mélodie douce qui danse au rythme de notre cœur,
+        nous rappelant les moments précieux de la vie.
+      </p>
+      <button class="retour-button" onclick="location.href='index.html';">
+        Retour à l'accueil
+      </button>
     </main>
+    <!-- Fenêtre modale pour afficher l'image en taille réelle -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
     <footer class="site-footer">
       <p class="footer-text">
         2025 Mariage S&D. Nid2&copy;reator - Tous droits réservés.
       </p>
     </footer>
-    <script src="ajout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      var modal = document.getElementById("myModal");
+      var modalImg = document.getElementById("img01");
+      var span = document.getElementsByClassName("close")[0];
+
+      // Ajoutez un écouteur d'événements à chaque image du carrousel
+      var images = document.querySelectorAll(".carousel-item img");
+      images.forEach(function (img) {
+        img.onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        };
+      });
+
+      // Lorsque l'utilisateur clique sur <span> (x), fermez la fenêtre modale
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
   </body>
 </html>
