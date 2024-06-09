@@ -269,3 +269,8 @@ p.maClasse {
   text-decoration: none;
   cursor: pointer;
 }
+
+.fa-regular {
+  position: relative;
+  top: 5px; /* Ajustez cette valeur en fonction de vos besoins */
+}
