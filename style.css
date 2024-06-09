@@ -42,7 +42,7 @@ body {
     220,
     0.8
   ); /* Fond semi-transparent pour le header */
-  color: white; /* Couleur du texte */
+  color: #FFFFF0; /* Couleur du texte */
   text-align: center; /* Centrer le texte horizontalement */
   padding: 10px 0; /* Espace intérieur du bandeau */
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
